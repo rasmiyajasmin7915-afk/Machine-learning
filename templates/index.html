@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Occupancy Prediction</title>
+</head>
+<body>
+
+    <h2>Room Occupancy Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        <input type="number" step="any" name="S1_Temp" placeholder="S1_Temp" required><br><br>
+        <input type="number" step="any" name="S2_Temp" placeholder="S2_Temp" required><br><br>
+        <input type="number" step="any" name="S3_Temp" placeholder="S3_Temp" required><br><br>
+        <input type="number" step="any" name="S4_Temp" placeholder="S4_Temp" required><br><br>
+
+        <input type="number" step="any" name="S1_Light" placeholder="S1_Light" required><br><br>
+        <input type="number" step="any" name="S2_Light" placeholder="S2_Light" required><br><br>
+        <input type="number" step="any" name="S3_Light" placeholder="S3_Light" required><br><br>
+        <input type="number" step="any" name="S4_Light" placeholder="S4_Light" required><br><br>
+
+        <input type="number" step="any" name="S1_Sound" placeholder="S1_Sound" required><br><br>
+        <input type="number" step="any" name="S2_Sound" placeholder="S2_Sound" required><br><br>
+        <input type="number" step="any" name="S3_Sound" placeholder="S3_Sound" required><br><br>
+        <input type="number" step="any" name="S4_Sound" placeholder="S4_Sound" required><br><br>
+
+        <input type="number" step="any" name="S5_CO2" placeholder="S5_CO2" required><br><br>
+        <input type="number" step="any" name="S5_CO2_Slope" placeholder="S5_CO2_Slope" required><br><br>
+
+        <input type="number" step="any" name="S6_PIR" placeholder="S6_PIR" required><br><br>
+        <input type="number" step="any" name="S7_PIR" placeholder="S7_PIR" required><br><br>
+
+        <input type="number" step="any" name="Hour" placeholder="Hour (0-23)" required><br><br>
+        <input type="number" step="any" name="Day" placeholder="Day" required><br><br>
+        <input type="number" step="any" name="Month" placeholder="Month" required><br><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
